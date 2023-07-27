@@ -16,7 +16,8 @@
           colors: {
             clifford: '#da373d',
             'primary-btn': '#E76F51',
-           'color-bg':"#F85559"
+           'color-bg':"#F85559",
+           'bg-color':'rgba(18, 18, 18, 0.10)',
         
          
           }
@@ -31,12 +32,12 @@
 </style>
 <!--  -->
 </head>
-<body>
+<body class="mx-0">
  
 <header class="container mx-auto w-[85%] m-5 ">
-   <nav class="bg-color-bg text-white rounded-full flex justify-around px-[5%]">
+   <nav class="bg-color-bg text-white rounded-full flex justify-around px-[5%] p-2">
     <div class="  m-auto hidden lg:flex ">
-        <ul class=" flex items-center gap-5 text-base">
+        <ul class=" flex items-center gap-5 text-base font-medium">
        <li><a>Home</a></li>
        <li><a>About Us</a></li>
        <li><a>Shop</a></li>
@@ -46,7 +47,7 @@
      </div>
         <div class=" flex  items-center  m-auto">
        <a class="inline-flex items-center g-auto px-1">
-        <img src="images/logo.png" alt=""></a> Fruit Brust
+        <img src="images/logo.png" alt=""></a><p class="font-bold text-4xl">Fruit Brust</P>
 
         </div>
       
@@ -68,15 +69,15 @@
      </div>
    </nav>
    <section>
-    <div class="carousel w-full m-5 mx-auto bg-purple-600">
+    <div class="carousel w-full m-5 mx-auto bg-purple-600 ">
         <div id="slide1" class="carousel-item relative w-full">
             <div class="hero min-h-screen" style="background-image: url(images/banner1.png);">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                   <div class="max-w-md">
-                    <h1 class="mb-5 text-5xl font-bold">Exotic tastes at your <br> doorstep</h1>
-                    <p class="mb-5">We supply highly quality organic products</p>
-                    <button class="btn bg-color-bg border-none text-white">Get Started</button>
+                    <h1 class="mb-5 text-5xl font-extrabold">Exotic tastes at your <br> doorstep</h1>
+                    <p class="mb-5 text-xl font-thin">We supply highly quality organic products</p>
+                    <button class="btn bg-color-bg border-none text-white">Shop Now</button>
                   </div>
                 </div>
               </div>
@@ -134,9 +135,9 @@
           </div>
         </div>
       </div>
+ 
    
-   
-    <div class="bg-white h-100 w-[80%] mx-auto flex justify-around  md-[30%]">
+    <div class="bg-white h-100 w-[80%] mx-auto flex justify-around  md-[30%] invisible lg:visible">
         <div>
            <img src="images/fruit1.png" alt="">
         </div>
@@ -159,16 +160,55 @@
   
 </header>
 <main class="cointainer mx-auto w-[85%]">
-    <section class="mx-auto" >
-        <div class="flex  gap-3 mx-auto justify-center items-center">
+    <section class="mx-auto " >
+        <section class="flex flex-col items-center lg:flex-row justify-center lg:justify-between m-4 gap-5 ">
+           <div class="mt-20 md-10" >
+            <h1 class="text-3xl text-black font-extrabold text-center lg:text-left">Deal of the day</h1>
+            <p class="text-sm font-thin text-center lg:text-left">Contrary to popular belief, is not simply random text. It has roots in a piece of classical
+                <br> Latin literature from 45 BC, making it over 2000 years old.</p>
+
+           </div>
+          <div class="mt-20 md-10">
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-3xl">
+                    <span style="--value:15;"></span>:
+                  </span>
+                  days
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-3xl">
+                    <span  style="--value:10;"></span>:
+                  </span>
+                <p class="text-sm"> hours</p>
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-3xl">
+                    <span  style="--value:24;"></span>:
+                  </span>
+                  min
+                </div> 
+                <div class="flex flex-col">
+                  <span class="countdown font-mono text-3xl">
+                    <span  style="--value:48;"></span>
+                  </span>
+                  sec
+                </div>
+              </div>
+          </div>
+           </div>
+        </section>
+        </section>
+        <section>
+        <div class="flex flex-col lg:flex-row  gap-3 mx-auto justify-center items-center">
             <div class="card card-compact w-72 bg-base-100 shadow-xl  items-center p-12">
                 <img class="w-[25%] h-[25%] pb-3" src="images/fruit6.png" alt="">
-                <h1 class="pb-3">12.90$ - 18.85$</h1>
+                <h1 class="pb-3 text-l font-bold">12.90$ - 18.85$</h1>
                 <hr class="w-24 h-2 pb-3">
-                <p class="pb-3">apple</p>
+                <p class="pb-3 font-light">apple</p>
                 <img class="pb-3" src="images/Group 24.png" alt="">
                 <p class="pb-3"> <!-- Open the modal using ID.showModal() method -->
-                    <button class="" onclick="my_modal_1.showModal()">details</button>
+                    <button class="text-color-bg" onclick="my_modal_1.showModal()">details</button>
                     <dialog id="my_modal_1" class="modal">
                       <form method="dialog" class="modal-box">
                         <img class="mx-auto" src="images/fruit8.png" alt="">
@@ -186,12 +226,12 @@
             </div>
             <div class="card card-compact w-72 bg-base-100 shadow-xl  items-center p-12">
                 <img class="w-[25%] h-[25%] pb-3" src="images/fruit7.png" alt="">
-                <h1 class="pb-3">12.90$ - 18.85$</h1>
+                <h1 class="pb-3 text-l font-bold">12.90$ - 18.85$</h1>
                 <hr class="w-24 h-2 pb-3">
-                <p class="pb-3">apple</p>
+                <p class="pb-3 font-light">orange</p>
                 <img class="pb-3" src="images/Group 24.png" alt="">
                 <p class="pb-3"> <!-- Open the modal using ID.showModal() method -->
-                    <button class="" onclick="my_modal_1.showModal()">details</button>
+                    <button class="text-color-bg" onclick="my_modal_1.showModal()">details</button>
                     <dialog id="my_modal_2" class="modal">
                       <form method="dialog" class="modal-box">
                         <img class="mx-auto" src="images/fruit7.png" alt="">
@@ -209,12 +249,12 @@
             </div>
             <div class="card card-compact w-72 bg-base-100 shadow-xl  items-center p-12">
                 <img class="w-[25%] h-[25%] pb-3" src="images/fruit8.png" alt="">
-                <h1 class="pb-3">12.90$ - 18.85$</h1>
+                <h1 class="pb-3 text-l font-bold">12.90$ - 18.85$</h1>
                 <hr class="w-24 h-2 pb-3">
-                <p class="pb-3">apple</p>
+                <p class="pb-3 font-light">Dragon</p>
                 <img class="pb-3" src="images/Group 24.png" alt="">
                 <p class="pb-3"> <!-- Open the modal using ID.showModal() method -->
-                    <button class="" onclick="my_modal_1.showModal()">details</button>
+                    <button class="text-color-bg" onclick="my_modal_1.showModal()">details</button>
                     <dialog id="my_modal_3" class="modal">
                       <form method="dialog" class="modal-box">
                         <img class="mx-auto" src="images/fruit9.png" alt="">
@@ -232,22 +272,24 @@
             </div>
             <div class="card card-compact w-72 bg-base-100 shadow-xl  items-center p-12">
                 <img class="w-[25%] h-[25%] pb-3" src="images/fruit9.png" alt="">
-                <h1 class="pb-3">12.90$ - 18.85$</h1>
+                <h1 class="pb-3 text-l font-bold">12.90$ - 18.85$</h1>
                 <hr class="w-24 h-2 pb-3">
-                <p class="pb-3">apple</p>
+                <p class="pb-3 font-light">Banana</p>
                 <img class="pb-3" src="images/Group 24.png" alt="">
                 <p class="pb-3"> <!-- Open the modal using ID.showModal() method -->
-                    <button class="" onclick="my_modal_1.showModal()">details</button>
+                    <button class="text-color-bg"  onclick="my_modal_1.showModal()">details</button>
                     <dialog id="my_modal_4" class="modal-1">
                       <form method="dialog" class="modal-box">
                         <img class="mx-auto" src="images/fruit6.png" alt="">
                         <h3 class="font-bold text-lg text-center">Red</h3>
                         <p class="py-4 text-center">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                         <img class="mx-auto" src="images/Group 24.png" alt="">
-                        <div class="modal-action">
+                        <div class="modal-action justify-center">
                           <!-- if there is a button in form, it will close the modal -->
+                          <div class="flex justify-center">
                           <button class="btn border-color-bg text-color-bg bg-white mx-auto">Close</button>
-                          <button class="btn bg-color-bg text-white ">Buy now</button>
+                          <button class=" mb-10 btn bg-color-bg text-white ">shop all</button>
+                        </div>
                         </div>
                       </form>
                     </dialog></p>
@@ -255,11 +297,202 @@
             </div>
            
         </div>
+        <section>
+            <button class="btn bg-color-bg mx-auto text-white flex justify-center m-4">Buy now</button>
+        </section>
     </section>
+    
+   <section class="cointainer mx-auto mt-20">
+    <div class="hero min-h-screen" style="background-image: url(images/team.png);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class="max-w-md">
+            <h1 class="mb-5 text-5xl font-bold">Meet the team section</h1>
+            <p class="mb-5">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+             <div class=" flex  flex-col lg:flex-row justify-around gap-[20%]">
+                <div> 
+                    <div class="avatar">
+                        <div class="w-24 rounded-full  ring-offset-base-100 ring-offset-2">
+                          <img src="/images/member1.png" />
+                        </div>
+                      </div>
+                      <p>asif mahbub</p>
+                      <p>fruit expert</p>
+                      <p class="flex items-center justify-center gap-3" href=""><img src="images/facebook 1.png" alt="">
+                        <img src="images/twitter (1) 1.png" alt="">
+                        <img src="images/linkedin 1.png" alt=""></p>
+
+
+                </div>
+                <div>
+                    <div> 
+                        <div class="avatar">
+                            <div class="w-24 rounded-full ring-offset-base-100 ring-offset-2">
+                              <img src="/images/member2.png" />
+                            </div>
+                          </div>
+                          <p>tonni khan</p>
+                          <p>fruit expert</p>
+                          <a class="flex items-center justify-center gap-3" href=""><img src="images/facebook 1.png" alt="">
+                            <img src="images/twitter (1) 1.png" alt="">
+                            <img src="images/linkedin 1.png" alt=""></a>
+    
+    
+                    </div>
+                </div>
+                <div>
+                    <div> 
+                        <div class="avatar">
+                            <div class="w-24 rounded-full  ring-offset-base-100 ring-offset-2">
+                              <img src="/images/member3.png" />
+                            </div>
+                          </div>
+                          <p>israk ahmed</p>
+                          <p>fruit expert</p>
+                          <a class="flex items-center justify-center gap-3" href=""><img src="images/facebook 1.png" alt="">
+                            <img src="images/twitter (1) 1.png" alt="">
+                            <img src="images/linkedin 1.png" alt=""></a>
+    
+    
+                    </div>
+                </div>
+                <div>
+                    <div> 
+                        <div class="avatar">
+                            <div class="w-24 rounded-full  ring-offset-base-100 ring-offset-2">
+                              <img src="/images/member4.png" />
+                            </div>
+                          </div>
+                          <p>sofia lavine</p>
+                          <p>fruit expert</p>
+                          <a class="flex items-center justify-center gap-3" href=""><img src="images/facebook 1.png" alt="">
+                            <img src="images/twitter (1) 1.png" alt="">
+                            <img src="images/linkedin 1.png" alt=""></a>
+    
+    
+                    </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </div>
+   </section>
    
+    <section class="text-center mt-20">
+        <p class="text-3xl font-extrabold mb-[3%]">Why Choose Us</p>
+        <p class="text-l font-light">Contrary to popular belief, is not simply random text. It has roots in a piece <br> of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+
+   </section>
+
+ <section class="flex mt-10 gap-7 flex-col lg:flex-row">
+    <div class="flex flex-col-reverse lg:flex-row gap-10">
+    <div>
+    <div class="lg:flex items-center  text-center lg:text-left gap-7">
+       <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3">
+        <img class="w-75" src="images/ice-cream 1.png" alt="">
+       </div>
+       <div>
+        <p class="mb-2 text-xl font-extrabold ">Dedicated Team</p>
+        <hr class="mb-2">
+        <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+       </div>
+      
+    </div>
+    <div class="lg:flex items-center text-center lg:text-left gap-4">
+        <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3">
+         <img class="w-75" src="images/gift-box 1.png" alt="">
+        </div>
+        <div>
+         <p class="mb-2 text-xl font-extrabold">Dedicated Team</p>
+         <hr class="mb-2">
+         <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+        </div>
+       
+     </div>
+     <div class="lg:flex items-center text-center lg:text-left gap-4">
+        <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3">
+         <img class="w-75" src="images/love 1.png" alt="">
+        </div>
+        <div>
+         <p class="mb-2  text-xl font-extrabold">Dedicated Team</p>
+         <hr class="mb-2">
+         <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+        </div>
+       
+     </div>
+     </div>
+     <div>
+        <img class="w-full h-full" src="images/whychoose1.png" alt="">
+
+     </div>
+     </div>
+      <div>
+        <div class="lg:flex  items-center text-center lg:text-right  gap-4">
+            <div>
+                <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3 lg:hidden">
+                    <img class="w-75" src="images/group 1.png" alt="">
+                   </div>
+            </div> 
+            <div class="">
+             <p class="mb-2  text-xl font-extrabold">Dedicated Team</p>
+             <hr class="mb-2">
+             <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+            </div>
+            <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3 order-1st lg:order-2">
+                <img class="w-75" src="images/Frame (3).png" alt="">
+               </div>
+           
+         </div>
+         <div class=" lg:flex items-center text-center lg:text-right  gap-4">
+
+            <div class>
+                <p class="mb-2  text-xl font-extrabold">Dedicated Team</p>
+                <hr class="mb-2">
+                <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+               </div>
+               <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3">
+                   <img class="w-75" src="images/group 1.png" alt="">
+                  </div>
+            
+          </div>
+          <div class="lg:flex items-center text-center lg:text-right gap-4 ">
+            <div class=>
+                <p class="mb-2  text-xl font-extrabold">Dedicated Team</p>
+                <hr class="mb-2">
+                <p class="mb-2 text-l font-light">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+               </div>
+               <div class="w-16 h-12 mx-auto lg:mx-0 bg-bg-color rounded-full p-3 invisible lg:visible ">
+                   <img class="w-75" src="images/like 1.png" alt="">
+                  </div>
+            
+          </div>
+
+      </div>
+      
+</section>
 
 </main>
-<footer>
+<footer class="bg-black text-white mt-10 p-4 mx-auto cointainer">
+    <div class=" flex justify-center items-center gap-3  m-auto">
+        <a class="inline-flex items-center g-auto px-1">
+         <img src="images/logo.png" alt=""></a> Fruit Brust
+         </div>
+         <div class="flex justify-center gap-10 mt-5">
+            <p>Home</p>
+            <p>About Us</p>
+            <p>Help</p>
+            <p>Shop</p>
+            <p>All Fruits</p>
+            <p>My Account</p>
+         </div>
+         <div class="flex justify-center gap-8 mt-5">
+            <img src="images/twitter 1.png" alt="">
+            <img src="images/facebook 1 (1).png" alt="">
+            <img src="images/Group 49.png" alt="">
+            <img src="images/instagram 1.png" alt="">
+            <img src="images/linkedin 1 (1).png" alt="">
+            <img src="images/apple 1.png" alt="">
+         </div>
 
 </footer>
     
